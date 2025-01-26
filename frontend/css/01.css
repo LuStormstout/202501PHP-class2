@@ -1,0 +1,265 @@
+/* 标签选择器, 会获取到所有标签相同的标签 */
+p {
+    color: rgba(15, 100, 255);
+    font-size: 30px;
+}
+
+/* 选择器: 标签选择器, 类选择器, ID选择器, 通配符选择器, 属性选择器, 伪类选择器, 伪元素选择器 ... */
+
+/* 类(class)选择器, 类选择器会获取到所有相同 class 属性的标签 */
+.div2 {
+    width: 120px;
+    height: 120px;
+    background-color: #f00;
+}
+
+.div3 {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(233, 90, 54);
+}
+
+/* ID选择器, ID 选择器的优先级高于类选择器 */
+/* 同一页面的 id 值应唯一 */
+#div3 {
+    width: 120px;
+    height: 120px;
+    background-color: #0f0;
+}
+
+/* 后代选择器, 选择 div4 类下的所有 p 标签 */
+.div4 p {
+    color: deeppink;
+    font-size: 20px;
+}
+
+/* 子元素选择器, 选择 div4 类下的所有「直接子元素」 p 标签 */
+.div4 > p {
+    color: mediumblue;
+    font-size: 20px;
+}
+
+/* 紧邻兄弟选择器, 选择 p1 类后面的 p 标签 */
+.p1 + p {
+    color: #f00;
+    font-size: 20px;
+}
+
+/* 通用兄弟选择器, 选择 p1 类后面的所有 p 标签 */
+.p1 ~ p {
+    color: #0f0;
+    font-size: 20px;
+}
+
+/* 属性选择器 */
+/* 选择所有带有 title 属性的标签 */
+[title] {
+    color: #f00;
+    font-size: 20px;
+}
+
+/* 选择所有带有 title 属性值为 "hello" 的标签 */
+[title="p3"] {
+    color: #0f0;
+    font-size: 20px;
+}
+
+/* 选择所有 type 属性值为 "text" 的标签 */
+input[type="text"] {
+    width: 450px;
+    height: 80px;
+    color: #0f0;
+    font-size: 20px;
+}
+
+/* 伪类选择器 */
+/* 选择所有链接 */
+
+/* 未访问的链接 */
+a:link {
+    color: #f00;
+    font-size: 20px;
+}
+
+/* 已访问的链接 */
+a:visited {
+    color: #0f0;
+    font-size: 20px;
+}
+
+/* 鼠标悬停在链接上 */
+a:hover {
+    color: #00f;
+    font-size: 20px;
+}
+
+/* 链接被选中, 激活时 */
+a:active {
+    color: #ff0;
+    font-size: 20px;
+}
+
+/* 用户交互伪类 focus */
+input:focus {
+    background-color: #f00;
+}
+
+button {
+    width: 400px;
+    height: 100px;
+}
+
+/* hover */
+button:hover {
+    background-color: #0f0;
+}
+
+.p4 {
+    color: red;
+    background-color: black; /* 设置背景颜色 */
+}
+
+.div7 {
+    width: 300px; /* 设置容器宽度为 100% */
+    height: 170px; /* 设置容器高度为视口高度 */
+    background-image: url('../html/car.png'); /* 替换为你的背景图片路径 */
+    background-size: cover; /* 背景图片覆盖容器 */
+    background-position: center; /* 图片居中 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+}
+
+.div8 {
+    width: 300px; /* 设置容器宽度 */
+    height: 180px; /* 设置容器高度 */
+    border: 5px solid #f00; /* 设置边框 */
+    border-radius: 20px; /* 设置圆角 */
+    /*border-bottom: 5px dashed #0f0; !* 设置底部边框 *!*/
+    box-shadow: 10px 10px 5px #888888; /* 设置阴影 */
+    text-align: center; /* 设置文本居中 */
+    font-size: 18px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+    text-shadow: 10px 10px 5px #888888; /* 设置文本阴影 */
+}
+
+.p5 {
+    color: #f00; /* 设置文本颜色 */
+    font-size: 40px; /* 设置字体大小 */
+    font-weight: bold; /* 设置字体加粗 */
+    /*text-shadow: 10px 10px 5px #888888; !* 设置文本阴影 *!*/
+    /*font-family: Monaco; !* 设置字体 *!*/
+    /*font-family: Chalkduster; !* 设置字体 *!*/
+    font-family: "Microsoft YaHei", "微软雅黑"; /* 设置字体, Windows 电脑可以尝试这个字体 */
+    line-height: 1.5; /* 设置行高 */
+    border-bottom: 1px solid black; /* 设置底部边框 */
+}
+
+.level-1 {
+    border: 1px solid black;
+    width: 400px;
+    height: 400px;
+    background-color: #f00;
+    /*
+        设置内外边距, 如果只写一个值, 则四边都是这个值,
+        如果写两个值, 第一个值是上下, 第二个值是左右,
+        如果写三个值, 第一个值是上, 第二个值是左右, 第三个值是下,
+        如果写四个值, 顺序是上右下左
+    */
+    margin: 10px 10px;
+    padding-top: 40px;
+}
+
+.level-2-1 {
+    width: 150px;
+    height: 150px;
+    background-color: #0f0;
+}
+
+.level-2-2 {
+    width: 150px;
+    height: 150px;
+    background-color: #00f;
+}
+
+body {
+    background-color: #f0f0f0;
+}
+
+.div-position {
+    width: 600px;
+    height: 600px;
+    background-color: dimgray;
+}
+
+.div9, .div10, .div11 {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+}
+
+.div9 {
+    position: relative; /* 相对定位, 相对于父元素 */
+    top: 400px; /* 相对于原来位置向下移动 1000px */
+    left: 400px; /* 相对于原来位置向右移动 1000px */
+}
+
+.div10 {
+    /* 绝对定位, 相对于最近的已定位的父元素, 如果没有已定位的父元素, 相对于浏览器窗口 */
+    position: absolute;
+    top: 380px; /* 相对于父元素向下移动 1000px */
+    left: 150px; /* 相对于父元素向右移动 1000px */
+}
+
+.div11 {
+    /* 固定定位, 相对于浏览器窗口 */
+    position: fixed;
+    top: 1150px; /* 相对于浏览器窗口向下移动 100px */
+    left: 2600px; /* 相对于浏览器窗口向右移动 100px */
+}
+
+.transitions {
+    width: 200px;
+    height: 60px;
+    background-color: #f00;
+    transition: background-color 2s ease; /* 设置过渡效果 */
+}
+
+.transitions:hover {
+    background-color: blue;
+}
+
+/* 动画 */
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(200px);
+    }
+    75% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animations {
+    width: 200px;
+    height: 60px;
+    background-color: #f00;
+    animation: move 5s infinite; /* 设置动画 */
+}
+
+/* 媒体查询 */
+@media (max-width: 800px) {
+    body {
+        background-color: dimgrey;
+    }
+}
+
+/* CSS 单位 */
+/* px, em, rem, %, vw, vh, vmin, vmax */
+/* px: 像素, em: 相对于父元素的字体大小, rem: 相对于根元素的字体大小, %: 百分比, vw: 视口宽度, vh: 视口高度, vmin: 视口宽高中较小的值, vmax: 视口宽高中较大的值 */
